@@ -39,7 +39,7 @@ class TestUser(unittest.TestCase):
     def test_save_user(self):
         '''
         test_save_user test case to test if the user object is saved into
-         the contact list
+         the user list
         '''
         self.new_user.save_user() # saving the new user
         self.assertEqual(len(User.user_list),1)
@@ -87,6 +87,23 @@ class TestCredentials(unittest.TestCase):
         Set up method to run before each test cases.
         '''
         self.new_credentials = Credentials("instagram","6789") # create credentials object
+
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+
+        self.assertEqual(self.new_credentials.account_name,"instagram")
+        self.assertEqual(self.new_credentials.account_password,"6789")
+
+    def test_save_credentials(self):
+        '''
+        test_save_credentials test case to test if the credentials object is saved into
+         the credentilas list
+        '''
+        self.new_credentials.save_credentials() # saving the new credentials
+        self.assertEqual(len(Credentials.credentials_list),1)
+
 
 
 
