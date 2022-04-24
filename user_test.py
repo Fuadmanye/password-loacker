@@ -8,6 +8,7 @@ class TestUser(unittest.TestCase):
 
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
+
     '''
 
      # Items up here .......
@@ -27,6 +28,16 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.user_name,"Fuad")
         self.assertEqual(self.new_user.password,"12345")
         
+    def test_save_user(self):
+        '''
+        test_save_user test case to test if the user object is saved into
+         the contact list
+        '''
+        self.new_user.save_user() # saving the new cuser
+        self.assertEqual(len(User.user_list),1)
+
 
 if __name__ == '__main__':
     unittest.main()
+
+     
