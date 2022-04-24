@@ -1,4 +1,5 @@
-import unittest # Importing the unittest module
+import unittest
+from Credentials import Credentials # Importing the unittest module
 from user import User # Importing the contact class
 
 class TestUser(unittest.TestCase):
@@ -71,6 +72,15 @@ class TestCredentials(unittest.TestCase):
         unittest.TestCase: TestCase class that helps in creating test cases
 
     '''  
+
+    # Items up here .......
+
+     # setup and class creation up here
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
+        '''
+        Credentials.credentials_list = []
 
 
 if __name__ == '__main__':
