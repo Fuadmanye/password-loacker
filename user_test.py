@@ -82,6 +82,13 @@ class TestCredentials(unittest.TestCase):
         '''
         Credentials.credentials_list = []
 
+    def setUp(self):
+        '''
+        Set up method to run before each test cases.
+        '''
+        self.new_credentials = Credentials("instagram","6789") # create credentials object
+
+
 
 if __name__ == '__main__':
     unittest.main()
