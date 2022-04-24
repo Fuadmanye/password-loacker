@@ -12,7 +12,7 @@ class Credentials:
     def save_credentials(self):
 
         '''
-        save_user method saves credentials objects into credentials_list
+        save_credential method saves credentials objects into credentials_list
         '''
 
         Credentials.crededentials_list.append(self)
