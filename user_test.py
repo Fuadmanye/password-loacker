@@ -33,7 +33,7 @@ class TestUser(unittest.TestCase):
         test_save_user test case to test if the user object is saved into
          the contact list
         '''
-        self.new_user.save_user() # saving the new cuser
+        self.new_user.save_user() # saving the new user
         self.assertEqual(len(User.user_list),1)
 
 
