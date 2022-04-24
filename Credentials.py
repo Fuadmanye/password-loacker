@@ -17,3 +17,11 @@ class Credentials:
 
         Credentials.crededentials_list.append(self)
 
+    def delete_credentials(self):
+
+        '''
+        delete_user method deletes a new credentials from the credentials_list
+        '''
+        Credentials.credentials_list.remove(self)
+        
+
