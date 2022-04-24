@@ -2,7 +2,7 @@ class User:
     """
     Class that generates new instances of users
     """
-    contact_list = [] # Empty contact list
+    user_list = [] # Empty contact list
 
 
     def __init__(self,user_name,password):
@@ -21,8 +21,7 @@ class User:
     def delete_user(self):
 
         '''
-        delete_user method deletes a saved user from the user_list
+        delete_user method deletes a new user from the user_list
         '''
-
         User.user_list.remove(self)
         
