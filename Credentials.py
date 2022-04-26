@@ -29,6 +29,15 @@ class Credentials:
         '''
         method that returns the credentials list
         '''
-        return cls.credentials_list  
+        return cls.credentials_list 
+
+    @classmethod
+    def get_credentials(cls, account_name):
+        """
+        A method that finds and returns credentials
+        """
+        for credentials in cls.credentials_list:
+            credentials.account_name == account_name
+            return credentials 
         
 
